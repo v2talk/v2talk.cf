@@ -1,0 +1,76 @@
+.message {
+  overflow: hidden;
+  margin: 0.04rem 0;
+  text-align: start;
+
+  &.left {
+    margin: 0.2rem 0;
+  }
+}
+.message-text {
+  padding: 0.2rem 0.4rem;
+  float: right;
+  clear: both;
+  border-radius: 0.5rem;
+  position: relative;
+  margin-bottom: 1px;
+  font-size: 0.3rem;
+  word-break: break-word;
+}
+.message.left .message-text {
+  margin-right: 70px;
+  margin-left: 20px;
+  background-color: #e5e5ea;
+  float: left;
+
+  a { color: black; }
+}
+.message.right .message-text {
+  margin-left: 70px;
+  margin-right: 20px;
+  background-color: #36a9fc;
+  color: #fff;
+  float: right;
+  a { color: white; }
+}
+
+.message-text:last-child:before,
+.message-text:last-child:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 35px;
+  height: 25px;
+  z-index: -1;
+}
+
+.message.right .message-text:before,
+.message.right .message-text:after {
+  border-radius: 0 0 0 50%;
+}
+.message.right .message-text:before {
+  height: 20px;
+  right: -23px;
+  background-color: #36a9fc;
+}
+.message.right .message-text:after {
+  right: -35px;
+  bottom: -3px;
+  background-color: #fff;
+}
+
+
+.message.left .message-text:before,
+.message.left .message-text:after {
+  border-radius: 0 0 50% 0;
+}
+.message.left .message-text:before {
+  height: 20px;
+  left: -23px;
+  background-color: #e5e5ea;
+}
+.message.left .message-text:after {
+  left: -35px;
+  bottom: -3px;
+  background-color: #fff;
+}
