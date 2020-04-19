@@ -3,7 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- set `maximum-scale` for some compatibility issues -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>
+      if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body);
+        }, false);
+      }
+      if(!window.Promise) {
+        document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+      }
+    </script>
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -27,6 +39,9 @@
     <title>v2talk.cf ❤ chaofeis</title>
 
     <style>
+      #analytics {
+        transition: all ease-in-out 3000;
+      }
       #busuanzi_container_site_uv {
         color: gray;
         font-size: 0.3rem;
@@ -36,7 +51,7 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="line text-big">
+    <div id="analytics" class="line text-big">
         <!-- <div class="x2 x2-move">
             <span id="busuanzi_container_page_pv" style="display: inline;">
                 <div class="padding border border-sub border-dotted fadein-left">
