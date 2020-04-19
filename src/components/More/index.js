@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 import avatarImg from '../../images/normal.JPG';
 import artsImg from '../../images/arts.jpg';
-import v2talkImg from "../../images/v2talk.webp";
+import v2talkImg from "../../images/v2talk.JPG";
 import v2talkIco from "../../images/v2talk.ico";
 import ireadCat from "../../images/cheshire_cat.png";
 

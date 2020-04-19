@@ -51,6 +51,12 @@ const messages = [
     role: 2,
   },
   {
+    type: "link",
+    detail:
+      "https://mp.weixin.qq.com/s/EIqga1PHYdvfZQcur7_rcA",
+    role: 2,
+  },
+  {
     type: "text",
     detail: `你的职业是？`,
     role: 1,
