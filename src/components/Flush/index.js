@@ -5,20 +5,37 @@ const TYPE = {
   ord: {
     name: "🍎",
     val: 1,
+    weight: 7,
   },
   col: {
     name: "🔥",
     val: 2,
+    weight: 1,
   },
   row: {
     name: "💥",
     val: 3,
+    weight: 1,
   },
   squ: {
     name: "💣",
     val: 4,
+    weight: 1,
   },
 };
+
+const types = Object.keys(TYPE);
+// 两种方式：
+// 1.按权重比例填充数组，数组长度直接取random，缺点是构造数组空间复杂度不佳
+// 2.按权重给每一项定义区间，取总权重的random，然后根据落到的区间取项
+// 实现第二种，第一步：取总权重,第二步：给每一项定义区间,为降低时间复杂度，一个循环解决两件事
+const weightSums = types.reduce((acc, i) => {
+  const min = acc,
+    max = acc + TYPE[i].weight;
+  TYPE[i].weightMin = min;
+  TYPE[i].weightMax = max;
+  return max;
+}, 0);
 
 const calcSelected = (items, start, end) => {
   const abs = Math.abs(start.id - end.id);
@@ -42,10 +59,17 @@ const calcSelected = (items, start, end) => {
   );
 };
 
-const generateItem = i => {
-  const types = Object.keys(TYPE);
+const generateItem = (i) => {
+  const curWeight = Math.floor(Math.random() * weightSums);
+
+  const type = _.find(
+    types,
+    (key) =>
+      curWeight >= TYPE[key].weightMin && curWeight <= TYPE[key].weightMax
+  );
+
   return {
-    ...TYPE[types[Math.floor(Math.random() * 4)]],
+    ...TYPE[type],
     row: Math.floor(i / 8),
     col: i % 8,
     id: i
@@ -176,6 +200,8 @@ export default function Test() {
                 (a, x) =>
                   (tempData[8 * (7 - x) + i] = {
                     ...a,
+                    col: i,
+                    row: 7-x,
                     id: 8 * (7 - x) + i
                   })
               );
@@ -221,7 +247,9 @@ export default function Test() {
         <li>
           符号含义：
           <ul>
-            <li>🍎：点击被炸后得到相应个数的分数，自己被炸后所在列列会往下移</li>
+            <li>
+              🍎：点击被炸后得到相应个数的分数，自己被炸后所在列列会往下移
+            </li>
             <li>🔥：竖炸弹，点击后所在列都被炸</li>
             <li>💥：横炸弹，点击后所在行都被炸</li>
             <li>💣：方炸弹，点击后已它为中心，周围 3*3 区域的格子都被炸</li>
@@ -229,6 +257,7 @@ export default function Test() {
         </li>
         <li>炸弹会引起关联效果</li>
         <li>PC 上可以通过鼠标选择区域</li>
+        <li>TODO：控制每个出现的权重</li>
       </ul>
     </div>
   );
