@@ -78,7 +78,7 @@ function App(props) {
         {ending ? (
           <>
             <Icon type="cross-circle" size="sm" />
-            对方已离开，Bye！
+            对方已离开，adios！
           </>
         ) : (
           <>
