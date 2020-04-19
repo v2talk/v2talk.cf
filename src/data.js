@@ -47,7 +47,7 @@ const messages = [
   {
     type: "text",
     detail:
-      "我写了一片文章来讲原因，有兴趣看下：https://mp.weixin.qq.com/s/EIqga1PHYdvfZQcur7_rcA",
+      "我写了一片文章来讲原因，有兴趣看下：",
     role: 2,
   },
   {
