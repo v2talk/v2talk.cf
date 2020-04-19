@@ -25,23 +25,19 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>v2talk.cf ❤ chaofeis</title>
+
+    <style>
+      #busuanzi_container_site_uv {
+        color: gray;
+        font-size: 0.3rem;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-
-    <div class="line text-big" style="display: none">
-        <div class="x2 x2-move">
+    <div class="line text-big">
+        <!-- <div class="x2 x2-move">
             <span id="busuanzi_container_page_pv" style="display: inline;">
                 <div class="padding border border-sub border-dotted fadein-left">
                     本文总阅读量<span id="busuanzi_value_page_pv">596022</span>次
@@ -54,15 +50,27 @@
                         本站总访问量<span id="busuanzi_value_site_pv">2397045</span>次
                     </div>
                 </span>
-        </div>
+        </div> -->
         <div class="x2 x1-move">
             <span id="busuanzi_container_site_uv" style="display: inline;">
                  <div class="padding border border-sub border-dotted fadein-right">
-                     本站总访客数<span id="busuanzi_value_site_uv">349628</span>人
+                    您是第 <span id="busuanzi_value_site_uv">53</span> 位朋友，欢迎跟我对话！
                  </div>
             </span>
         </div>
     </div>
+
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   </body>
 </html>

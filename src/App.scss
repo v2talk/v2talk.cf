@@ -2,12 +2,9 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-
-  .welcome {
-    color: gray;
-    font-size: 0.3rem;
-  }
+  height: calc(100vh - 0.3rem); 
+  padding-bottom: constant(safe-area-inset-bottom); /* 兼容 iOS < 11.2 */
+  padding-bottom: env(safe-area-inset-bottom); /* 兼容 iOS >= 11.2 */
 
   .phone {
     overflow: auto;
@@ -16,10 +13,12 @@
 
   .bottom {
     background-color: #f6f6f6;
-    border: 1px solid #dcdcdc;
-    margin-top: -1px;
-    padding: 10px;
+    border-top: 1px solid #dcdcdc;
+    height: 1rem;
     font-size: 0.3rem;
+    width: 100vw;
+    padding: 0.15rem;
+    box-sizing: border-box;
   }
 }
 

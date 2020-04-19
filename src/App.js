@@ -7,16 +7,6 @@ import MessageItem from './components/MessageItem';
 function App() {
   const [current, setCurrent] = useState(1);
   const [ending, setEnnding] = useState(false);
-  const [uv, setUv] = useState(1);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const uv = document.getElementById("busuanzi_value_site_uv").innerText;
-      setUv(uv);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  },[]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -25,7 +15,7 @@ function App() {
       } else {
         setCurrent(current + 1);
       }
-    }, Math.random()*10000);
+    }, Math.random()*5000);
 
     return () => clearInterval(timer);
   }, [current]);
@@ -42,9 +32,6 @@ function App() {
 
   return (
     <div className="App">
-      <div className="welcome">
-        您是第 {uv} 位朋友，欢迎跟我对话！
-      </div>
       <div className="phone">
         {messages.slice(0, current).map((message, index) => (
           <MessageItem key={index} {...message} />
