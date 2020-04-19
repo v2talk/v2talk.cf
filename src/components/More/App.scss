@@ -1,0 +1,17 @@
+.More {
+  .am-card-header-content {
+    display: flex;
+    align-items: center;
+    img {
+      max-width: .6rem;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-around;
+  }
+}

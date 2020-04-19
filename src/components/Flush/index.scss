@@ -1,0 +1,44 @@
+.Flush {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #282c34;
+  height: 100vh;
+  color: #fff;
+  flex-direction: column;
+
+  .preview-area {
+    display: grid;
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: repeat(8, 40px);
+    font-size: 0.6rem;
+    /* grid-row-gap: 6px; */
+  }
+
+  .item {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 500;
+  }
+
+  .item--vanish {
+    background-color: transparent;
+  }
+
+  .item--selecting {
+    background-color: antiquewhite;
+  }
+
+  .item:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
+  }
+
+  .additional {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+  }
+}

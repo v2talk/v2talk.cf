@@ -1,47 +1,26 @@
-import React, {useState, useEffect, useLayoutEffect} from 'react';
-import './App.scss';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import messages from './data';
-import MessageItem from './components/MessageItem';
+import Home from './components/Home';
+import More from './components/More';
+import Flush from './components/Flush';
+import JSONParser from "./components/JSONParser";
 
 function App() {
-  const [current, setCurrent] = useState(1);
-  const [ending, setEnnding] = useState(false);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (current === messages.length) {
-        setEnnding(true);
-      } else {
-        setCurrent(current + 1);
-      }
-    }, Math.random()*5000);
-
-    return () => clearInterval(timer);
-  }, [current]);
-
-  useLayoutEffect(() => {
-    const contentArea = document.getElementsByClassName("phone")[0];
-    
-    if (contentArea.scrollHeight > contentArea.clientHeight) {
-      contentArea.scrollTop =
-        contentArea.scrollHeight - contentArea.clientHeight;
-    }
-  
-  }, [current]);
-
   return (
-    <div className="App">
-      <div className="phone">
-        {messages.slice(0, current).map((message, index) => (
-          <MessageItem key={index} {...message} />
-        ))}
-      </div>
-
-      <div className="bottom">
-        {ending ? '对方已离开，Bye！' : '对方正在输入中...'}
-      </div>
-    </div>
+    <Router>
+      {/* A <Switch> looks through its children <Route>s and
+          renders the first one that matches the current URL. */}
+      <Switch>
+        <Route path="/chaofeis" render={(props) => <More {...props} />}></Route>
+        <Route path="/flush" render={(props) => <Flush {...props} />}></Route>
+        <Route
+          path="/json-parser"
+          render={(props) => <JSONParser {...props} />}
+        ></Route>
+        <Route path="/" render={(props) => <Home {...props}/>}></Route>
+      </Switch>
+    </Router>
   );
 }
 
