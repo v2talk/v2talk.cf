@@ -5,6 +5,7 @@ import Home from './components/Home';
 import More from './components/More';
 import Flush from './components/Flush';
 import JSONParser from "./components/JSONParser";
+import GridAnimation from "./components/GridAnimation";
 
 function App() {
   return (
@@ -18,7 +19,11 @@ function App() {
           path="/json-parser"
           render={(props) => <JSONParser {...props} />}
         ></Route>
-        <Route path="/" render={(props) => <Home {...props}/>}></Route>
+        <Route
+          path="/animation"
+          render={(props) => <GridAnimation {...props} />}
+        ></Route>
+        <Route path="/" render={(props) => <Home {...props} />}></Route>
       </Switch>
     </Router>
   );

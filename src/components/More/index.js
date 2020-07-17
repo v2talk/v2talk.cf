@@ -10,11 +10,16 @@ import artsImg from '../../images/arts.jpg';
 import v2talkImg from "../../images/v2talk.JPG";
 import v2talkIco from "../../images/v2talk.ico";
 import ireadCat from "../../images/cheshire_cat.png";
+import rectSelector from "../../images/rect.png";
 
 const Item = List.Item;
 const Brief = Item.Brief;
 
 const socialData = [
+  {
+    text: "博客",
+    link: "http://chaofei.tech/",
+  },
   {
     text: "Twitter",
     link: "https://twitter.com/chaofeis",
@@ -23,10 +28,10 @@ const socialData = [
     text: "Instagram",
     link: "https://www.instagram.com/sunchaofei/",
   },
-  {
-    text: "语雀",
-    link: "https://www.yuque.com/chaofeis/lifelog/",
-  },
+  // {
+  //   text: "语雀",
+  //   link: "https://www.yuque.com/chaofeis/lifelog/",
+  // },
   {
     text: "豆瓣",
     link: "https://www.douban.com/people/chafel/",
@@ -77,7 +82,9 @@ function More(props) {
               arrow="horizontal"
               thumb={ireadCat}
               multipleLine
-              onClick={() => { window.open("https://chafel.github.io/iRead/", '_blank');}}
+              onClick={() => {
+                window.open("https://chafel.github.io/iRead/", "_blank");
+              }}
             >
               iRead
               <Brief>
@@ -87,14 +94,50 @@ function More(props) {
                 URL 收藏到 GitHub 制定的 Repo
               </Brief>
             </Item>
-            <Item extra="去玩玩" arrow="horizontal" onClick={() => {
-              props.history.push("/flush");
-            }}>
+            <Item
+              arrow="horizontal"
+              thumb={rectSelector}
+              multipleLine
+              onClick={() => {
+                window.open(
+                  "http://chaofei.tech/rect-selector-copy-rect-area-text-in-chrome/",
+                  "_blank"
+                );
+              }}
+            >
+              rect-selector
+              <Brief>
+                在网页上用矩形框选择区域双击后进行 OCR <br />
+                识别结果放在剪贴板的浏览器插件
+                <br />
+                可以在网页上矩形选择文字和任意内容 OCR
+              </Brief>
+            </Item>
+            <Item
+              extra="去看看"
+              arrow="horizontal"
+              onClick={() => {
+                props.history.push("/animation");
+              }}
+            >
+              Grid 布局和动画
+            </Item>
+            <Item
+              extra="去玩玩"
+              arrow="horizontal"
+              onClick={() => {
+                props.history.push("/flush");
+              }}
+            >
               React 版消消乐
             </Item>
-            <Item extra="去试试" arrow="horizontal" onClick={() => {
-              props.history.push("json-parser");
-            }}>
+            <Item
+              extra="去试试"
+              arrow="horizontal"
+              onClick={() => {
+                props.history.push("json-parser");
+              }}
+            >
               JSON Parser
             </Item>
           </List>
