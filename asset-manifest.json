@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "./static/css/main.91201e6d.chunk.css",
-    "main.js": "./static/js/main.83c701a0.chunk.js",
-    "main.js.map": "./static/js/main.83c701a0.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.5db12b80.js",
-    "runtime-main.js.map": "./static/js/runtime-main.5db12b80.js.map",
-    "static/css/2.6b5d0b40.chunk.css": "./static/css/2.6b5d0b40.chunk.css",
-    "static/js/2.85e07c47.chunk.js": "./static/js/2.85e07c47.chunk.js",
-    "static/js/2.85e07c47.chunk.js.map": "./static/js/2.85e07c47.chunk.js.map",
+    "main.css": "./static/css/main.11aaa80b.chunk.css",
+    "main.js": "./static/js/main.1b59bc37.chunk.js",
+    "main.js.map": "./static/js/main.1b59bc37.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.a65e9109.js",
+    "runtime-main.js.map": "./static/js/runtime-main.a65e9109.js.map",
+    "static/css/2.58c0e9fc.chunk.css": "./static/css/2.58c0e9fc.chunk.css",
+    "static/js/2.7eeb0932.chunk.js": "./static/js/2.7eeb0932.chunk.js",
+    "static/js/2.7eeb0932.chunk.js.map": "./static/js/2.7eeb0932.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.834588ffa65a11d814b02db194dd1dbc.js": "./precache-manifest.834588ffa65a11d814b02db194dd1dbc.js",
+    "precache-manifest.6d1a1e5c772b4726f9e98844293d83a1.js": "./precache-manifest.6d1a1e5c772b4726f9e98844293d83a1.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/2.6b5d0b40.chunk.css.map": "./static/css/2.6b5d0b40.chunk.css.map",
-    "static/css/main.91201e6d.chunk.css.map": "./static/css/main.91201e6d.chunk.css.map",
-    "static/js/2.85e07c47.chunk.js.LICENSE.txt": "./static/js/2.85e07c47.chunk.js.LICENSE.txt",
+    "static/css/2.58c0e9fc.chunk.css.map": "./static/css/2.58c0e9fc.chunk.css.map",
+    "static/css/main.11aaa80b.chunk.css.map": "./static/css/main.11aaa80b.chunk.css.map",
+    "static/js/2.7eeb0932.chunk.js.LICENSE.txt": "./static/js/2.7eeb0932.chunk.js.LICENSE.txt",
     "static/media/arts.jpg": "./static/media/arts.94f5972f.jpg",
     "static/media/cheshire_cat.png": "./static/media/cheshire_cat.94fc59d0.png",
     "static/media/normal.JPG": "./static/media/normal.ebba48e1.JPG",
+    "static/media/rect.png": "./static/media/rect.0295f06e.png",
     "static/media/v2talk.JPG": "./static/media/v2talk.4ef24dda.JPG",
     "static/media/v2talk.ico": "./static/media/v2talk.f2c47c66.ico"
   },
   "entrypoints": [
-    "static/js/runtime-main.5db12b80.js",
-    "static/css/2.6b5d0b40.chunk.css",
-    "static/js/2.85e07c47.chunk.js",
-    "static/css/main.91201e6d.chunk.css",
-    "static/js/main.83c701a0.chunk.js"
+    "static/js/runtime-main.a65e9109.js",
+    "static/css/2.58c0e9fc.chunk.css",
+    "static/js/2.7eeb0932.chunk.js",
+    "static/css/main.11aaa80b.chunk.css",
+    "static/js/main.1b59bc37.chunk.js"
   ]
 }
